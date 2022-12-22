@@ -1,7 +1,7 @@
 import { computeHeadingLevel } from '@testing-library/react'
 import { useState } from 'react'
 import { onRegistration } from '../api/auth'
-import Layout from '../components/layout'
+
 
 const Register = () => {
   const [values, setValues] = useState({
@@ -31,7 +31,7 @@ console.log(values)
   }
 
   return (
-    <Layout>
+    
       <form onSubmit={(e) => onSubmit(e)} className='container mt-3'>
         <h1>Register</h1>
 
@@ -74,7 +74,7 @@ console.log(values)
           Submit
         </button>
       </form>
-    </Layout>
+ 
   )
 }
 

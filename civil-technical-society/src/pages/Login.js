@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { onLogin } from '../api/auth'
-import Layout from '../components/layout'
 import { useDispatch } from 'react-redux'
 import { authenticateUser } from '../redux/slices/authSlice'
 
@@ -31,7 +30,7 @@ const Login = () => {
   }
 
   return (
-    <Layout>
+   
       <form onSubmit={(e) => onSubmit(e)} className='container mt-3'>
         <h1>Login</h1>
 
@@ -73,7 +72,7 @@ const Login = () => {
           Submit
         </button>
       </form>
-    </Layout>
+  
   )
 }
 
