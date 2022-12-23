@@ -12,6 +12,11 @@ export async function onLogin(loginData) {
   return await axios.post('http://localhost:8000/api/v1/admin-view/login', loginData)
 }
 
-export async function onLogout() {
+// For getting new refresh token
+export async function onRefresh() {
   return await axios.get('http://localhost:8000/api/v1/admin-view/refresh')
+}
+
+export async function onLogout() {
+  return await axios.delete('http://localhost:8000/api/v1/admin-view/refresh')
 }

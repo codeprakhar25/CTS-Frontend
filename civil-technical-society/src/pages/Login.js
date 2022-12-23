@@ -8,7 +8,7 @@ const Login = () => {
     id: 0,
     password: '',
   })
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false) 
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault()
 
     try {
-      await onLogin(values)
+      const response = await onLogin(values)
       dispatch(authenticateUser())
 
       localStorage.setItem('isAuth', 'true')

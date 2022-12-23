@@ -6,7 +6,7 @@ import { onRegistration } from '../api/auth'
 const Register = () => {
   const [values, setValues] = useState({
     id: 0,
-    password: '',
+    password: '', 
   })
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -14,13 +14,13 @@ const Register = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
   }
-console.log(values)
+// console.log(values)
   const onSubmit = async (e) => {
     e.preventDefault()
 
     try {
       const {data} = await onRegistration(values)
-      // console.log(response)
+      console.log(data)
       setError('')
       setSuccess(data.message)
       setValues({ id: '', password: '' })
